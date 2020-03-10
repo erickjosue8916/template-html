@@ -1,0 +1,200 @@
+:root{
+    --main-bg-color: #f00;
+    --button-bg-color-1: #f00;
+    --button-text-color-1: #fff;
+    --link-text-active: #0f0;
+    --link-bg-active: #fff;
+    --hero-image: url('../img/bg.jpg');
+    --input--text-color: #00f;
+    --input-border-color: #c0c0c0;
+    --input-border-color-focus: #00f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    display: grid;
+    grid-template-rows: 65px auto auto ;
+}
+
+/* Start Button */
+
+button {
+    padding: 5px 15px 5px 15px;
+    background: var(--button-bg-color-1);
+    color: var(--button-text-color-1);
+    border: 0;
+}
+
+input[type="text"], textarea {
+    border: 0;
+    border-bottom: 1px solid var(--input-border-color);
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid var(--input-border-color-focus);
+}
+
+/* End Button */
+/* Start Header */
+header {
+    z-index: 5;
+    background: var(--main-bg-color);
+    width: 100%;
+    height: 60px;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.logo {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Start Menu Style*/
+.menu {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-template-columns: repeat(4, 1fr);
+}
+.menu > a, .sign > a {
+    display: grid;
+    align-content: center;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    transition: all .5s ease;
+}
+
+.menu .active {
+    background: var(--link-bg-active);
+    background: var(--link-text-active);
+}
+
+.menu > a:hover {
+    background: #000;
+    color: #fff;
+}
+/* End Menu Style*/
+
+/* Start Sing  */
+header .sign {
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end: 13;
+    grid-template-columns: 1fr 1fr;
+}
+
+    .signin, .signup {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+/* End Sign*/
+
+/* End Header */
+
+
+/* Start Home Image */
+.hero {
+    display: grid;
+    position: relative;
+    top: -5px;
+    width: 100%;
+    height: 91vh;
+    background: var(--hero-image);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hero .content{
+    background: rgba(0,0,0,0.5);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+/* End Home */
+
+/* Start Main */
+main {
+    display: grid;
+    grid-template-rows: auto 75px;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+
+main .container {
+    display: grid;
+    width: 80%;
+    margin: auto;
+}
+
+main .container section {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px auto;
+}
+
+main .container section .title-section{
+    align-content: center;
+    display: grid;
+    justify-content: center;
+}
+    .title-section h1 {
+        padding: 10px 10px 5px 10px;
+        border-bottom: 1px solid #000;
+    }
+
+main .container section .content-section{
+    display: grid;
+    align-content: center;
+}
+    .content-section .wrapper-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .content-section .content-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+        .content-form form{
+            display: grid;
+            align-content: center;
+            width: 100%;
+            justify-content: left;
+            grid-row-gap: 10px;
+            grid-template-rows: 65px 65px 65px;
+        }
+
+.content-form form .wrap-input{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+        .content-form form .input-form {
+            display: grid;
+            justify-content: left;
+            width: 100%;
+            grid-template-rows: auto auto;
+        }
+/* End Main */
+/* Start Footer */
+footer {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: var(--main-bg-color);
+}
+/* End Footer */
